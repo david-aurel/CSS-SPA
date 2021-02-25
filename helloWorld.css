@@ -1,6 +1,0 @@
-html:before {
-  position: absolute;
-  content: "Hello world";
-  font-size: 5rem;
-  color: hotpink;
-}
