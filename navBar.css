@@ -1,0 +1,11 @@
+#navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+#navBar ul {
+  display: flex;
+  justify-content: space-between;
+}

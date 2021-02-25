@@ -1,8 +1,6 @@
 html:before {
   position: absolute;
   content: "Hello world";
-  font-size: 6rem;
+  font-size: 5rem;
   color: hotpink;
-  font-family: sans-serif;
-  font-weight: 900;
 }
