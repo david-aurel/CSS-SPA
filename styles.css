@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+#navBar ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+}
+
+h1 {
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#home {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(135deg, #eceddc 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #eceddc 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #eceddc 25%, transparent 25%),
+    linear-gradient(45deg, #eceddc 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #ec173a;
+}
+#page-1 {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 141, 239, 1) 0%,
+    rgba(83, 83, 255, 1) 100%
+  );
+}
+#page-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(83, 83, 255, 1) 0%,
+    rgba(38, 255, 200, 1) 100%
+  );
+}
+#page-3 {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 38, 212, 1) 0%,
+    rgba(255, 151, 0, 1) 100%
+  );
+}
+#page-4 {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 151, 0, 1) 0%,
+    rgba(255, 246, 0, 1) 100%
+  );
+}
+
+/* routing*/
+
+/* hide all pages */
+#router > * {
+  display: none;
+}
+
+/* except the default for the  '/' path) */
+#home {
+  display: block;
+}
+
+/* show the page with the id that matches the hash route (/#projects, /#about etc.) */
+#router > *:target {
+  display: block;
+}
+
+/* hide the default '/' page when something else is active */
+#router > *:target ~ #home {
+  display: none;
+}
